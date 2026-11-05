@@ -1,0 +1,63 @@
+{
+  "dataset_size": 8000,
+  "test_size": 1600,
+  "benchmarks": {
+    "Logistic Regression (Baseline)": {
+      "accuracy": 0.935,
+      "roc_auc": 0.9834,
+      "f1_score": 0.9562,
+      "precision": 0.9474,
+      "recall": 0.9651,
+      "brier_loss": 0.0449
+    },
+    "Random Forest": {
+      "accuracy": 0.875,
+      "roc_auc": 0.9578,
+      "f1_score": 0.9204,
+      "precision": 0.8647,
+      "recall": 0.9838,
+      "brier_loss": 0.0944
+    },
+    "LightGBM": {
+      "accuracy": 0.9169,
+      "roc_auc": 0.9734,
+      "f1_score": 0.9446,
+      "precision": 0.9264,
+      "recall": 0.9634,
+      "brier_loss": 0.0577
+    },
+    "XGBoost (Primary XAI Tree)": {
+      "accuracy": 0.9194,
+      "roc_auc": 0.9741,
+      "f1_score": 0.9461,
+      "precision": 0.9295,
+      "recall": 0.9634,
+      "brier_loss": 0.0568
+    },
+    "CrediTrust Stacking Ensemble": {
+      "accuracy": 0.9231,
+      "roc_auc": 0.9736,
+      "f1_score": 0.9486,
+      "precision": 0.9326,
+      "recall": 0.9651,
+      "brier_loss": 0.0571
+    }
+  },
+  "confusion_matrix": [
+    [
+      342,
+      82
+    ],
+    [
+      41,
+      1135
+    ]
+  ],
+  "fairness_audit": {
+    "rural_approval_rate": 0.7696,
+    "urban_approval_rate": 0.7493,
+    "disparate_impact_ratio": 1.0271,
+    "equal_opportunity_diff": 0.0079,
+    "four_fifths_rule_passed": true
+  }
+}
